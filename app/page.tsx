@@ -1,91 +1,51 @@
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+import { Montserrat } from '@next/font/google'
+import view from '../public/view.jpg'
+import Link from 'next/link'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({
+  subsets: ['cyrillic'],
+  variable: '--font-cyrillic',
+})
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+    <main className={montserrat.className}>
+      <div className="w-full min-h-screen bg-grey">
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src={view}
+          alt="Bagrunnsbilde"
+          fill
           priority
+          quality={60}
+          className="object-cover"
+          sizes="1500px"
+          placeholder="blur"
         />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+        <div className="text-center items-center flex flex-col gap-2 w-full pt-[25vh] relative p-4">
+          <h1 className="text-primary text-h2 lg:text-h1">Råtebu</h1>
+          <h3 className="text-primary text-h4 lg:text-h3">
+            Velkommen til paradis i Norge
+          </h3>
+          <p className="text-primary text-body1">
+            Vassnestangen 37, 1746 Skjeberg
+          </p>
+          <div className="mt-12 relative">
+            <Link
+              className="w-fit border border-transparent color-white rounded-md bg-grey p-3 text-sm transition-all duration-300 hover:p-4 hover:shadow-lg"
+              target="_blank"
+              href="https://www.google.com/maps/place/R%C3%A5tebu/@59.1476155,11.1215208,15z/data=!4m6!3m5!1s0x46441b5b356895a5:0x5b8e8f0c42dc88e2!8m2!3d59.1476!4d11.120528!16s%2Fg%2F11jmb09gxp"
+            >
+              Hvordan kommer jeg dit?
+            </Link>
+          </div>
         </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <footer className="w-screen py-12 bg-footer text-center">
+        <p className="text-white text-sm">
+          © | Spiderboy Web Development | {new Date().getFullYear()}
+        </p>
+      </footer>
     </main>
   )
 }
