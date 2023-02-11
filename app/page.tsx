@@ -24,9 +24,9 @@ export default function Home() {
         />
         <div className="text-center items-center flex flex-col gap-2 w-full pt-[25vh] relative p-4">
           <h1 className="text-primary text-h2 lg:text-h1">Råtebu</h1>
-          <h3 className="text-primary text-h4 lg:text-h3">
+          <h2 className="text-primary text-h4 lg:text-h3">
             Velkommen til paradis i Norge
-          </h3>
+          </h2>
           <p className="text-primary text-body1">
             Vassnestangen 37, 1746 Skjeberg
           </p>
