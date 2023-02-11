@@ -3,7 +3,7 @@ export default function Head() {
     <>
       <title>Råtebu</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta name="description" content="Nettside for råtebu i skjeberg" />
+      <meta name="description" content="Nettside for hytta Råtebu i Skjeberg" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
