@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Montserrat } from '@next/font/google'
 import view from '../public/view.jpg'
 import Link from 'next/link'
+import ExternalIcon from '@/icons/ExternalIcon'
 
 const montserrat = Montserrat({
   subsets: ['cyrillic'],
@@ -32,11 +33,12 @@ export default function Home() {
           </p>
           <div className="mt-12 relative">
             <Link
-              className="w-fit border border-transparent color-white rounded-md bg-grey p-3 text-sm transition-all duration-300 hover:p-4 hover:shadow-lg"
+              className="w-fit flex gap-2 items-center border border-transparent color-white rounded-md bg-grey p-3 text-sm transition-all duration-300 hover:p-4 hover:shadow-lg hover:bg-primary hover:text-white"
               target="_blank"
               href="https://www.google.com/maps/place/R%C3%A5tebu/@59.1476155,11.1215208,15z/data=!4m6!3m5!1s0x46441b5b356895a5:0x5b8e8f0c42dc88e2!8m2!3d59.1476!4d11.120528!16s%2Fg%2F11jmb09gxp"
             >
-              Hvordan kommer jeg dit?
+              <span>Hvordan kommer jeg dit?</span>
+              <ExternalIcon />
             </Link>
           </div>
         </div>
